@@ -42,6 +42,7 @@ const html = `
           });
         }, 500);        
       }
+      goAlves();
       var t = setInterval(goAlves, 60 * 1000); 
     </script>
     <style>
