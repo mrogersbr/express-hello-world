@@ -18,7 +18,7 @@ const html = `
     <script>
       function goAlves() {
 
-        console.log('executou...');
+        console.log('executou... ' + Date.now());
 
         setTimeout(() => {
           confetti({
