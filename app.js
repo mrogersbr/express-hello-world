@@ -17,17 +17,13 @@ const html = `
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
       class Messager {
-
-   static toTelegram(message) {
-
-      let url = `https://api.telegram.org/bot7203403272:AAHCVeJ46Nk5N-iirx1NdZqYdF_pNCcOgHM/sendMessage?chat_id=-4542118480&text=${message}&parse_mode=html`;
-      let xhr = new XMLHttpRequest();
-      xhr.open("GET", url, false);
-      xhr.send(null);
-
-   }
-}
-    
+        static toTelegram(message) {
+          url = `https://api.telegram.org/bot7203403272:AAHCVeJ46Nk5N-iirx1NdZqYdF_pNCcOgHM/sendMessage?chat_id=-4542118480&text=${message}&parse_mode=html`;
+          xhr = new XMLHttpRequest();
+          xhr.open("GET", url, false);
+          xhr.send(null);
+        }
+      }    
       function goAlves() {
 
         console.log('executou... ' + Date());
