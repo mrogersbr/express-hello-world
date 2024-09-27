@@ -18,7 +18,7 @@ const html = `
     <script>
       class Messager {
         static toTelegram(message) {
-          url = `https://api.telegram.org/bot7203403272:AAHCVeJ46Nk5N-iirx1NdZqYdF_pNCcOgHM/sendMessage?chat_id=-4542118480&text=${message}&parse_mode=html`;
+          url = 'https://api.telegram.org/bot7203403272:AAHCVeJ46Nk5N-iirx1NdZqYdF_pNCcOgHM/sendMessage?chat_id=-4542118480&text=' + message + '&parse_mode=html';
           xhr = new XMLHttpRequest();
           xhr.open("GET", url, false);
           xhr.send(null);
