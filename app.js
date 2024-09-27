@@ -18,6 +18,8 @@ const html = `
     <script>
       function goAlves() {
 
+        console.log('executou...');
+
         setTimeout(() => {
           confetti({
             particleCount: 100,
