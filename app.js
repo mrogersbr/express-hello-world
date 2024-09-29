@@ -23,23 +23,9 @@ const html = `
           xhr.open("GET", url, false);
           xhr.send(null);
         }
-      }    
-      function goAlves() {
-
-        console.log('executou... ' + Date());
-        Messager.toTelegram('executou... ' + Date());
-
-        setTimeout(() => {
-          confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 },
-            disableForReducedMotion: true
-          });
-        }, 500);        
-      }
+      }          
       goAlves();
-      var t = setInterval(goAlves, 60 * 1000); 
+      var t = setInterval(goAlves, 30 * 1000); 
     </script>
     <style>
       @import url("https://p.typekit.net/p.css?s=1&k=vnd5zic&ht=tk&f=39475.39476.39477.39478.39479.39480.39481.39482&a=18673890&app=typekit&e=css");
