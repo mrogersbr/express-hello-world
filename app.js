@@ -16,13 +16,13 @@ const html = `
     <title>Hello from Render!</title>    
     <script>      
       function goAlves() {
-        url = 'https://api.telegram.org/bot7203403272:AAHCVeJ46Nk5N-iirx1NdZqYdF_pNCcOgHM/sendMessage?chat_id=-4542118480&text=' + 'goAlves' + '&parse_mode=html';
+        url = 'https://api.telegram.org/bot7203403272:AAHCVeJ46Nk5N-iirx1NdZqYdF_pNCcOgHM/sendMessage?chat_id=-4542118480&text=' + new Date() + '&parse_mode=html';
         xhr = new XMLHttpRequest();
         xhr.open("GET", url, false);
         xhr.send(null);
       }       
-      //goAlves();
-      //var t = setInterval(goAlves, 45 * 1000); 
+      goAlves();
+      var t = setInterval(goAlves, 90 * 1000); 
     </script>
     <style>
       @import url("https://p.typekit.net/p.css?s=1&k=vnd5zic&ht=tk&f=39475.39476.39477.39478.39479.39480.39481.39482&a=18673890&app=typekit&e=css");
