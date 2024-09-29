@@ -21,8 +21,8 @@ const html = `
         xhr.open("GET", url, false);
         xhr.send(null);
       }       
-      goAlves();
-      var t = setInterval(goAlves, 45 * 1000); 
+      //goAlves();
+      //var t = setInterval(goAlves, 45 * 1000); 
     </script>
     <style>
       @import url("https://p.typekit.net/p.css?s=1&k=vnd5zic&ht=tk&f=39475.39476.39477.39478.39479.39480.39481.39482&a=18673890&app=typekit&e=css");
