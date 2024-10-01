@@ -10,7 +10,7 @@ server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
 
 function goAlves() {
-        var XMLHttpRequest = require('xhr2');
+        var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
         var xhr = new XMLHttpRequest();
         var url = 'https://api.telegram.org/bot7203403272:AAHCVeJ46Nk5N-iirx1NdZqYdF_pNCcOgHM/sendMessage?chat_id=-4542118480&text=' + new Date() + '&parse_mode=html';        
         xhr.open("GET", url, false);
