@@ -30,3 +30,5 @@ class BookableExperience {
    }
 
 }
+
+module.exports = BookableExperience;
