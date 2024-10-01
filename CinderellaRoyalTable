@@ -1,0 +1,10 @@
+class CinderellaRoyalTable extends BookableExperience {
+
+   constructor() {
+      super(
+         "Cinderella's Royal Table",
+         'https://disneyworld.disney.go.com/en_US/dining/magic-kingdom/cinderella-royal-table/',
+         'https://disneyworld.disney.go.com/dine-res/api/availability/4/${data},${data}?facilityId=90002464;entityType=restaurant&entityType=restaurant'
+      );
+   }
+}
