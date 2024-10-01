@@ -7,3 +7,5 @@ class BibbidiBobbidiBoutique extends BookableExperience {
       );
    }
 }
+
+module.exports = BibbidiBobbidiBoutique;
