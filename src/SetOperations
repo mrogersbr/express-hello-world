@@ -1,0 +1,30 @@
+class SetOperations {
+
+   static difference(setA, setB) {
+
+      if (setB.length === 0) {
+         return setA;
+      }
+
+      let setDifference = [];
+      setA.forEach((element, i) => {
+         if (!SetOperations.contains(setB, element)) {
+            setDifference.push(element);
+         }
+      });
+
+      return setDifference;
+
+   }
+
+   static contains(setA, element) {
+
+      for (let i = 0; i < setA.length; i++) {
+         if (setA[i].isEqualTo(element)) {
+            return true;
+         }
+      }
+
+      return false;
+   }
+}
