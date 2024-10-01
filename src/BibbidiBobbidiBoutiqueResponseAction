@@ -1,0 +1,59 @@
+class BibbidiBobbidiBoutiqueResponseAction {
+
+   static execute(jsonResponse) {
+
+      if (jsonResponse.hasOwnProperty('typeId') && jsonResponse.typeId === "UNAUTHORIZED") {
+
+         window.open('https://disneyworld.disney.go.com/enchanting-extras-collection/booking-bibbidi-bobbidi-boutique-magic-kingdom/','_self');
+         return [];
+      }
+
+      if (jsonResponse.hasOwnProperty('statusCode') && (jsonResponse.statusCode === 401 || jsonResponse.statusCode === 403)) {
+
+         let timeoutIncrement = 4000;
+
+         document.querySelectorAll('.finder-button')[2].click();
+
+         setTimeout(function() {
+            let b = document.querySelector('.btn btn-submit');
+            b.click();
+         }, 1 * timeoutIncrement);
+
+         setTimeout(function() {
+            let b = document.querySelector('#BtnSubmit');
+            b.click();
+         }, 2 * timeoutIncrement);
+
+         setTimeout(function() {
+            document.querySelector('#count-selector4').click();
+         }, 3 * timeoutIncrement);
+
+         setTimeout(function() {
+            document.querySelectorAll('[data-date="2024-10-30"]')[1].click();
+         }, 4 * timeoutIncrement);
+
+         setTimeout(function() {
+            document.querySelector('#btnCancel').click();
+         }, 5 * timeoutIncrement);
+
+      }
+
+      if (jsonResponse.hasOwnProperty('statusCode') && (jsonResponse.statusCode === 200) {
+
+      //Bibbidi Bobbidi Boutique
+      if (jsonResponse.hasOwnProperty('bookableExperience') && jsonResponse.bookableExperience.id == '290140') {
+
+         let availableTimes = [];
+         if (jsonResponse.bookableExperience.availableOffers.offerCount > 0) {
+            jsonResponse.bookableExperience.availableOffers.offers[bookableExperienceDate].forEach((offer, i) => {
+               availableTimes.push(offer.startTime.substring(0, 5));
+            });
+         }
+
+         return new Offer(bookableExperienceDescription, bookableExperienceDate, availableTimes);
+      }
+
+
+      return null;
+   }
+}
