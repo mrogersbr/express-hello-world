@@ -31,3 +31,5 @@ class BookableExperienceRequester {
       return httpResponses; //[[bookableExperience.description(), date, xhr.responseText], [bookableExperience.description(), date, xhr.responseText], ...]
    }
 }
+
+module.exports = BookableExperienceRequester;
