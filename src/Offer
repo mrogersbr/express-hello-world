@@ -1,0 +1,50 @@
+class Offer {
+
+   #bookableExperienceDescription;
+   #bookableExperienceDate;
+   #availableTimes = [];
+
+   constructor(bookableExperienceDescription, bookableExperienceDate, availableTimes) {
+
+      this.#bookableExperienceDescription = bookableExperienceDescription;
+      this.#bookableExperienceDate = bookableExperienceDate;
+      this.#availableTimes = availableTimes;
+
+   }
+
+   get isAvaliable() {
+      return this.#availableTimes.length > 0;
+   }
+
+   get bookableExperienceDescription() {
+      return this.#bookableExperienceDescription;
+   }
+
+   get bookableExperienceDate() {
+      return this.#bookableExperienceDate;
+   }
+
+   get availableTimes() {
+      return this.#availableTimes;
+   }
+
+   isEqualTo(anotherOffer) {
+
+      if (this.#bookableExperienceDescription === anotherOffer.bookableExperienceDescription) {
+         if (this.#bookableExperienceDate === anotherOffer.bookableExperienceDate) {
+            if (this.#availableTimes.length === anotherOffer.availableTimes.length) {
+
+               for (let i = 0; i < this.#availableTimes.length; i++) {
+                  if (this.#availableTimes[i].localeCompare(anotherOffer.availableTimes[i])) {
+                     return false;
+                  }
+               }
+
+               return true;
+            }
+         }
+      }
+
+      return false;
+   }
+}
