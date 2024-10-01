@@ -1,0 +1,38 @@
+class OutputModifier {
+
+   static toHTML(offer) {
+
+      let html = '';
+      html += `<b>${offer.bookableExperienceDescription}</b>%0A`;
+      html += `<i>${offer.bookableExperienceDate}</i>%0A`;
+
+      if (offer.isAvaliable) {
+         offer.availableTimes.forEach((availableTime, i) => {
+            html += `<u>${availableTime}</u>  `;
+         });
+      } else {
+         html += 'No available times for today.';
+      }
+
+      return html;
+   }
+
+   static toPlainText(offer) {
+
+      let html = '';
+      html += offer.bookableExperienceDescription;
+      html += '\n';
+      html += offer.bookableExperienceDate;
+      html += '\n';
+
+      if (offer.isAvaliable) {
+         offer.availableTimes.forEach((availableTime, i) => {
+            html += `${availableTime}  `;
+         });
+      } else {
+         html += 'No available times for today.';
+      }
+
+      return html;
+   }
+}
