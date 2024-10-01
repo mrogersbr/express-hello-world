@@ -1,0 +1,30 @@
+class BookableExperienceResponse {
+
+   static parse(httpResponses) {
+
+      let offers = [];
+      httpResponses.forEach((httpResponse, i) => {
+
+         let bookableExperienceDescription = httpResponse[0];
+         let bookableExperienceDate = httpResponse[1];
+         let jsonResponse = JSON.parse(httpResponse[2]);
+
+         switch(bookableExperienceDescription) {
+
+            case 'Bibbidi Bobbidi Boutique':
+
+               return BibbidiBobbidiBoutiqueResponseAction.execute(jsonResponse);
+               break;
+
+            case "Cinderella's Royal Table":
+
+               CinderellaRoyalTableResponseAction.execute(jsonResponse);
+               break;
+
+            default:
+               throw new Error('Type of BookableExperience not implemented yet.');
+
+         }
+      });
+   }
+}
