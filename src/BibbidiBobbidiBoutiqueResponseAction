@@ -57,3 +57,5 @@ class BibbidiBobbidiBoutiqueResponseAction {
       return null;
    }
 }
+
+module.exports = BibbidiBobbidiBoutique;
