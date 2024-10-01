@@ -1,0 +1,19 @@
+class SelectedPeriod {
+
+   static get() {
+
+      let tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      tomorrow = tomorrow.toISOString().split('T')[0];
+
+      let theDayAfterTomorrow = new Date();
+      theDayAfterTomorrow.setDate(theDayAfterTomorrow.getDate() + 2);
+      theDayAfterTomorrow = theDayAfterTomorrow.toISOString().split('T')[0];
+
+      //targetDates = [tomorrow, theDayAfterTomorrow, '2024-10-30', '2024-11-05']
+      //var targetDates = ['2024-10-30', '2024-11-05'];
+
+      return [tomorrow, theDayAfterTomorrow, '2024-10-30', '2024-11-05'];
+
+   }
+}
